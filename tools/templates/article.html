@@ -1,0 +1,27 @@
+    <article class="article">
+      <div class="wrap-narrow">
+        <a class="back" href="../">← Барча мақолалар</a>
+        <h1>{{title}}</h1>
+        <div class="meta"><time datetime="{{iso}}">{{date}}</time> · {{minutes}} дақиқа ўқиш</div>
+      </div>
+      <div class="wrap-narrow">
+        {{hero}}
+        <div class="prose">
+{{body}}
+        </div>
+        <div class="tags">{{tags}}</div>
+        <div class="share">
+          <a class="btn btn-outline" href="{{tg_link}}" target="_blank" rel="noopener">Telegram'да изоҳ қолдириш</a>
+          <a class="btn btn-ghost-dark" href="https://t.me/share/url?url={{share}}" target="_blank" rel="noopener">Улашиш</a>
+        </div>
+        <aside class="author">
+          <img src="../../assets/img/portrait.jpg" alt="">
+          <div>
+            <b>Умид Худойбердиев</b>
+            <p>Суғурта ва молия мутахассиси, 20 йилдан ортиқ тажриба.</p>
+            <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Каналга обуна бўлиш →</a>
+          </div>
+        </aside>
+        <nav class="post-nav">{{nav}}</nav>
+      </div>
+    </article>

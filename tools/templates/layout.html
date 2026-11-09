@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uz-Cyrl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{root}}favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{root}}assets/style.css?v=1">
+  <script>try{if(localStorage.getItem("yozuv")==="lotin")document.documentElement.classList.add("lotin-wait")}catch(e){}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{root}}"><span class="brand-mark" data-keep>УХ</span><span>Умид Худойбердиев</span></a>
+      <nav class="nav" id="nav">
+        <a href="{{root}}#haqida">Мен ҳақимда</a>
+        <a href="{{root}}#faoliyat">Фаолият</a>
+        <a href="{{root}}maqolalar/">Мақолалар</a>
+        <a href="{{root}}#aloqa">Алоқа</a>
+      </nav>
+      <div class="header-tools">
+        <button class="script-toggle" id="scriptToggle" type="button" aria-label="Ёзувни алмаштириш" data-keep>
+          <span data-s="kiril">Кир</span><span data-s="lotin">Lot</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+{{content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="brand"><span class="brand-mark" data-keep>УХ</span><span>Умид Худойбердиев</span></div>
+        <p class="muted">Биргаликда ривожланамиз!</p>
+      </div>
+      <div class="footer-links">
+        <a href="{{root}}maqolalar/">Мақолалар</a>
+        <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Telegram канал</a>
+      </div>
+      <p class="muted small">© {{year}} Умид Худойбердиев. Мақолалар Telegram каналдан автоматик олинади.</p>
+    </div>
+  </footer>
+  <script src="{{root}}assets/script.js?v=1"></script>
+</body>
+</html>
