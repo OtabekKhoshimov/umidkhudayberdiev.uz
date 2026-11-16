@@ -1,0 +1,990 @@
+# Pages CMS (app.pagescms.org) sozlamasi: ustoz sayt matnlarini shu yerdan tahrirlaydi.
+# Maqolalar avtomatik Telegram kanaldan olinadi, ularni bu yerda tahrirlash shart emas.
+media:
+  input: assets/img
+  output: "/assets/img"
+content:
+- name: uz
+  label: Oʻzbekcha (asosiy)
+  type: file
+  path: content/uz.yml
+  fields:
+  - name: seo
+    label: Google va ulashish uchun
+    type: object
+    fields:
+    - name: title
+      label: Sahifa sarlavhasi
+      type: string
+    - name: description
+      label: Qisqa tavsif
+      type: text
+  - name: name
+    label: Ism-familiya
+    type: string
+  - name: hero
+    label: Bosh qism (eng yuqori)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kasbi (kichik sariq yozuv)
+      type: string
+    - name: first_name
+      label: Ism
+      type: string
+    - name: last_name
+      label: Familiya
+      type: string
+    - name: lead
+      label: Qisqa tanishtiruv
+      type: text
+    - name: photo
+      label: Portret surati
+      type: image
+    - name: button_articles
+      label: Maqolalar tugmasi
+      type: string
+    - name: button_telegram
+      label: Telegram tugmasi
+      type: string
+  - name: stats
+    label: Raqamlar
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{value} {label}"
+    fields:
+    - name: value
+      label: Raqam
+      type: string
+      description: "{count} — maqolalar soni avtomatik qo'yiladi"
+    - name: label
+      label: Izoh
+      type: string
+  - name: about
+    label: Men haqimda
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: lead
+      label: Birinchi (katta) xatboshi
+      type: text
+    - name: text
+      label: Davomi
+      type: text
+      description: Xatboshilarni bo'sh qator bilan ajrating
+  - name: education
+    label: Ta'lim
+    type: object
+    fields:
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: O'quv joylari
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {title}"
+      fields:
+      - name: years
+        label: Yil(lar)
+        type: string
+      - name: title
+        label: O'quv joyi
+        type: string
+      - name: subtitle
+        label: Yo'nalish
+        type: string
+  - name: career
+    label: Ish faoliyati
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: current_label
+      label: '"Hozirgi ish joyi" yozuvi'
+      type: string
+    - name: items
+      label: Ish joylari (yangisi tepada)
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {company}"
+      fields:
+      - name: years
+        label: Yillar
+        type: string
+      - name: company
+        label: Tashkilot
+        type: string
+      - name: current
+        label: Hozirgi ish joyi
+        type: boolean
+  - name: activity
+    label: Faoliyat (klublar, forumlar)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: Kartochkalar
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{title}"
+      fields:
+      - name: title
+        label: Nomi
+        type: string
+      - name: text
+        label: Matn
+        type: text
+  - name: gallery
+    label: Fotogalereya
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{caption}"
+    fields:
+    - name: image
+      label: Rasm
+      type: image
+    - name: caption
+      label: Izoh
+      type: string
+    - name: wide
+      label: Keng rasm (2 ustun)
+      type: boolean
+  - name: masterclass
+    label: Master-klasslar
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+    - name: posters
+      label: Afishalar
+      type: image
+      list: true
+    - name: topics
+      label: Mavzular
+      type: string
+      list: true
+  - name: articles
+    label: Maqolalar bo'limi
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Bosh sahifadagi sarlavha
+      type: string
+    - name: all_link
+      label: '"Barcha maqolalar" havolasi'
+      type: string
+    - name: page_heading
+      label: Maqolalar sahifasi sarlavhasi
+      type: string
+    - name: page_lead
+      label: Maqolalar sahifasi tavsifi
+      type: text
+  - name: cta
+    label: Pastki qism (iqtibos va chaqiriq)
+    type: object
+    fields:
+    - name: quote
+      label: Iqtibos
+      type: text
+    - name: quote_author
+      label: Iqtibos muallifi
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+  - name: contact
+    label: Aloqa (bo'sh qoldirilsa ko'rinmaydi)
+    type: object
+    fields:
+    - name: phone
+      label: Telefon
+      type: string
+    - name: email
+      label: E-mail
+      type: string
+    - name: telegram_personal
+      label: Shaxsiy Telegram (@username)
+      type: string
+  - name: footer
+    label: Sayt osti
+    type: object
+    fields:
+    - name: slogan
+      label: Shior
+      type: string
+- name: ru
+  label: Ruscha
+  type: file
+  path: content/ru.yml
+  fields:
+  - name: seo
+    label: Google va ulashish uchun
+    type: object
+    fields:
+    - name: title
+      label: Sahifa sarlavhasi
+      type: string
+    - name: description
+      label: Qisqa tavsif
+      type: text
+  - name: name
+    label: Ism-familiya
+    type: string
+  - name: hero
+    label: Bosh qism (eng yuqori)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kasbi (kichik sariq yozuv)
+      type: string
+    - name: first_name
+      label: Ism
+      type: string
+    - name: last_name
+      label: Familiya
+      type: string
+    - name: lead
+      label: Qisqa tanishtiruv
+      type: text
+    - name: photo
+      label: Portret surati
+      type: image
+    - name: button_articles
+      label: Maqolalar tugmasi
+      type: string
+    - name: button_telegram
+      label: Telegram tugmasi
+      type: string
+  - name: stats
+    label: Raqamlar
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{value} {label}"
+    fields:
+    - name: value
+      label: Raqam
+      type: string
+      description: "{count} — maqolalar soni avtomatik qo'yiladi"
+    - name: label
+      label: Izoh
+      type: string
+  - name: about
+    label: Men haqimda
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: lead
+      label: Birinchi (katta) xatboshi
+      type: text
+    - name: text
+      label: Davomi
+      type: text
+      description: Xatboshilarni bo'sh qator bilan ajrating
+  - name: education
+    label: Ta'lim
+    type: object
+    fields:
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: O'quv joylari
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {title}"
+      fields:
+      - name: years
+        label: Yil(lar)
+        type: string
+      - name: title
+        label: O'quv joyi
+        type: string
+      - name: subtitle
+        label: Yo'nalish
+        type: string
+  - name: career
+    label: Ish faoliyati
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: current_label
+      label: '"Hozirgi ish joyi" yozuvi'
+      type: string
+    - name: items
+      label: Ish joylari (yangisi tepada)
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {company}"
+      fields:
+      - name: years
+        label: Yillar
+        type: string
+      - name: company
+        label: Tashkilot
+        type: string
+      - name: current
+        label: Hozirgi ish joyi
+        type: boolean
+  - name: activity
+    label: Faoliyat (klublar, forumlar)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: Kartochkalar
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{title}"
+      fields:
+      - name: title
+        label: Nomi
+        type: string
+      - name: text
+        label: Matn
+        type: text
+  - name: gallery
+    label: Fotogalereya
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{caption}"
+    fields:
+    - name: image
+      label: Rasm
+      type: image
+    - name: caption
+      label: Izoh
+      type: string
+    - name: wide
+      label: Keng rasm (2 ustun)
+      type: boolean
+  - name: masterclass
+    label: Master-klasslar
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+    - name: posters
+      label: Afishalar
+      type: image
+      list: true
+    - name: topics
+      label: Mavzular
+      type: string
+      list: true
+  - name: articles
+    label: Maqolalar bo'limi
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Bosh sahifadagi sarlavha
+      type: string
+    - name: all_link
+      label: '"Barcha maqolalar" havolasi'
+      type: string
+    - name: page_heading
+      label: Maqolalar sahifasi sarlavhasi
+      type: string
+    - name: page_lead
+      label: Maqolalar sahifasi tavsifi
+      type: text
+  - name: cta
+    label: Pastki qism (iqtibos va chaqiriq)
+    type: object
+    fields:
+    - name: quote
+      label: Iqtibos
+      type: text
+    - name: quote_author
+      label: Iqtibos muallifi
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+  - name: contact
+    label: Aloqa (bo'sh qoldirilsa ko'rinmaydi)
+    type: object
+    fields:
+    - name: phone
+      label: Telefon
+      type: string
+    - name: email
+      label: E-mail
+      type: string
+    - name: telegram_personal
+      label: Shaxsiy Telegram (@username)
+      type: string
+  - name: footer
+    label: Sayt osti
+    type: object
+    fields:
+    - name: slogan
+      label: Shior
+      type: string
+- name: en
+  label: Inglizcha
+  type: file
+  path: content/en.yml
+  fields:
+  - name: seo
+    label: Google va ulashish uchun
+    type: object
+    fields:
+    - name: title
+      label: Sahifa sarlavhasi
+      type: string
+    - name: description
+      label: Qisqa tavsif
+      type: text
+  - name: name
+    label: Ism-familiya
+    type: string
+  - name: hero
+    label: Bosh qism (eng yuqori)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kasbi (kichik sariq yozuv)
+      type: string
+    - name: first_name
+      label: Ism
+      type: string
+    - name: last_name
+      label: Familiya
+      type: string
+    - name: lead
+      label: Qisqa tanishtiruv
+      type: text
+    - name: photo
+      label: Portret surati
+      type: image
+    - name: button_articles
+      label: Maqolalar tugmasi
+      type: string
+    - name: button_telegram
+      label: Telegram tugmasi
+      type: string
+  - name: stats
+    label: Raqamlar
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{value} {label}"
+    fields:
+    - name: value
+      label: Raqam
+      type: string
+      description: "{count} — maqolalar soni avtomatik qo'yiladi"
+    - name: label
+      label: Izoh
+      type: string
+  - name: about
+    label: Men haqimda
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: lead
+      label: Birinchi (katta) xatboshi
+      type: text
+    - name: text
+      label: Davomi
+      type: text
+      description: Xatboshilarni bo'sh qator bilan ajrating
+  - name: education
+    label: Ta'lim
+    type: object
+    fields:
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: O'quv joylari
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {title}"
+      fields:
+      - name: years
+        label: Yil(lar)
+        type: string
+      - name: title
+        label: O'quv joyi
+        type: string
+      - name: subtitle
+        label: Yo'nalish
+        type: string
+  - name: career
+    label: Ish faoliyati
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: current_label
+      label: '"Hozirgi ish joyi" yozuvi'
+      type: string
+    - name: items
+      label: Ish joylari (yangisi tepada)
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {company}"
+      fields:
+      - name: years
+        label: Yillar
+        type: string
+      - name: company
+        label: Tashkilot
+        type: string
+      - name: current
+        label: Hozirgi ish joyi
+        type: boolean
+  - name: activity
+    label: Faoliyat (klublar, forumlar)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: Kartochkalar
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{title}"
+      fields:
+      - name: title
+        label: Nomi
+        type: string
+      - name: text
+        label: Matn
+        type: text
+  - name: gallery
+    label: Fotogalereya
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{caption}"
+    fields:
+    - name: image
+      label: Rasm
+      type: image
+    - name: caption
+      label: Izoh
+      type: string
+    - name: wide
+      label: Keng rasm (2 ustun)
+      type: boolean
+  - name: masterclass
+    label: Master-klasslar
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+    - name: posters
+      label: Afishalar
+      type: image
+      list: true
+    - name: topics
+      label: Mavzular
+      type: string
+      list: true
+  - name: articles
+    label: Maqolalar bo'limi
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Bosh sahifadagi sarlavha
+      type: string
+    - name: all_link
+      label: '"Barcha maqolalar" havolasi'
+      type: string
+    - name: page_heading
+      label: Maqolalar sahifasi sarlavhasi
+      type: string
+    - name: page_lead
+      label: Maqolalar sahifasi tavsifi
+      type: text
+  - name: cta
+    label: Pastki qism (iqtibos va chaqiriq)
+    type: object
+    fields:
+    - name: quote
+      label: Iqtibos
+      type: text
+    - name: quote_author
+      label: Iqtibos muallifi
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+  - name: contact
+    label: Aloqa (bo'sh qoldirilsa ko'rinmaydi)
+    type: object
+    fields:
+    - name: phone
+      label: Telefon
+      type: string
+    - name: email
+      label: E-mail
+      type: string
+    - name: telegram_personal
+      label: Shaxsiy Telegram (@username)
+      type: string
+  - name: footer
+    label: Sayt osti
+    type: object
+    fields:
+    - name: slogan
+      label: Shior
+      type: string
+- name: ar
+  label: Arabcha
+  type: file
+  path: content/ar.yml
+  fields:
+  - name: seo
+    label: Google va ulashish uchun
+    type: object
+    fields:
+    - name: title
+      label: Sahifa sarlavhasi
+      type: string
+    - name: description
+      label: Qisqa tavsif
+      type: text
+  - name: name
+    label: Ism-familiya
+    type: string
+  - name: hero
+    label: Bosh qism (eng yuqori)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kasbi (kichik sariq yozuv)
+      type: string
+    - name: first_name
+      label: Ism
+      type: string
+    - name: last_name
+      label: Familiya
+      type: string
+    - name: lead
+      label: Qisqa tanishtiruv
+      type: text
+    - name: photo
+      label: Portret surati
+      type: image
+    - name: button_articles
+      label: Maqolalar tugmasi
+      type: string
+    - name: button_telegram
+      label: Telegram tugmasi
+      type: string
+  - name: stats
+    label: Raqamlar
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{value} {label}"
+    fields:
+    - name: value
+      label: Raqam
+      type: string
+      description: "{count} — maqolalar soni avtomatik qo'yiladi"
+    - name: label
+      label: Izoh
+      type: string
+  - name: about
+    label: Men haqimda
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: lead
+      label: Birinchi (katta) xatboshi
+      type: text
+    - name: text
+      label: Davomi
+      type: text
+      description: Xatboshilarni bo'sh qator bilan ajrating
+  - name: education
+    label: Ta'lim
+    type: object
+    fields:
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: O'quv joylari
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {title}"
+      fields:
+      - name: years
+        label: Yil(lar)
+        type: string
+      - name: title
+        label: O'quv joyi
+        type: string
+      - name: subtitle
+        label: Yo'nalish
+        type: string
+  - name: career
+    label: Ish faoliyati
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: current_label
+      label: '"Hozirgi ish joyi" yozuvi'
+      type: string
+    - name: items
+      label: Ish joylari (yangisi tepada)
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{years} — {company}"
+      fields:
+      - name: years
+        label: Yillar
+        type: string
+      - name: company
+        label: Tashkilot
+        type: string
+      - name: current
+        label: Hozirgi ish joyi
+        type: boolean
+  - name: activity
+    label: Faoliyat (klublar, forumlar)
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: items
+      label: Kartochkalar
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{title}"
+      fields:
+      - name: title
+        label: Nomi
+        type: string
+      - name: text
+        label: Matn
+        type: text
+  - name: gallery
+    label: Fotogalereya
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{caption}"
+    fields:
+    - name: image
+      label: Rasm
+      type: image
+    - name: caption
+      label: Izoh
+      type: string
+    - name: wide
+      label: Keng rasm (2 ustun)
+      type: boolean
+  - name: masterclass
+    label: Master-klasslar
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+    - name: posters
+      label: Afishalar
+      type: image
+      list: true
+    - name: topics
+      label: Mavzular
+      type: string
+      list: true
+  - name: articles
+    label: Maqolalar bo'limi
+    type: object
+    fields:
+    - name: eyebrow
+      label: Kichik sarlavha
+      type: string
+    - name: heading
+      label: Bosh sahifadagi sarlavha
+      type: string
+    - name: all_link
+      label: '"Barcha maqolalar" havolasi'
+      type: string
+    - name: page_heading
+      label: Maqolalar sahifasi sarlavhasi
+      type: string
+    - name: page_lead
+      label: Maqolalar sahifasi tavsifi
+      type: text
+  - name: cta
+    label: Pastki qism (iqtibos va chaqiriq)
+    type: object
+    fields:
+    - name: quote
+      label: Iqtibos
+      type: text
+    - name: quote_author
+      label: Iqtibos muallifi
+      type: string
+    - name: heading
+      label: Sarlavha
+      type: string
+    - name: text
+      label: Matn
+      type: text
+  - name: contact
+    label: Aloqa (bo'sh qoldirilsa ko'rinmaydi)
+    type: object
+    fields:
+    - name: phone
+      label: Telefon
+      type: string
+    - name: email
+      label: E-mail
+      type: string
+    - name: telegram_personal
+      label: Shaxsiy Telegram (@username)
+      type: string
+  - name: footer
+    label: Sayt osti
+    type: object
+    fields:
+    - name: slogan
+      label: Shior
+      type: string

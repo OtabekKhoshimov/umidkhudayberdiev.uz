@@ -249,7 +249,7 @@ html.lotin .script-toggle [data-s="lotin"] { background: var(--gold); color: var
   .nav {
     position: fixed; inset: 68px 0 auto 0; flex-direction: column; gap: 0; background: var(--navy);
     padding: 8px 16px 20px; border-bottom: 1px solid rgba(255,255,255,.08);
-    transform: translateY(-120%); transition: transform .25s; z-index: -1;
+    transform: translateY(calc(-100% - 80px)); transition: transform .25s; z-index: -1;
   }
   .nav a { padding: 14px 4px; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 1rem; }
   .menu-open .nav { transform: none; }
@@ -280,3 +280,38 @@ section[id] { scroll-margin-top: 68px; }
   .brand-mark { width: 32px; height: 32px; font-size: .78rem; }
   .brand > span:last-child { font-size: .88rem; }
 }
+
+/* Til tanlash */
+.lang-menu { display: flex; gap: 2px; margin-inline-start: 8px; padding-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,.15); }
+.lang-menu a { font-size: .8rem; font-weight: 600; padding: 4px 8px; border-radius: 6px; color: rgba(255,255,255,.6); }
+.lang-menu a.active { color: var(--navy); background: var(--gold); }
+.nav { align-items: center; }
+
+.notice { background: var(--paper-2); border-inline-start: 3px solid var(--gold); padding: 14px 18px; border-radius: 8px; font-size: .95rem; color: var(--text); margin-bottom: 28px; }
+.notice a { color: #8a6524; font-weight: 600; }
+.contacts { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; }
+.contacts li { display: flex; gap: 12px; align-items: baseline; }
+.contacts span { color: rgba(255,255,255,.5); font-size: .85rem; min-width: 80px; }
+.contacts a { color: #fff; text-decoration: none; font-weight: 600; }
+
+/* Arab tili (o'ngdan chapga) */
+[dir="rtl"] body { font-family: "Noto Sans Arabic", var(--sans); }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] .prose, [dir="rtl"] .big,
+[dir="rtl"] .cta blockquote p, [dir="rtl"] .stats dt, [dir="rtl"] .post-nav a { font-family: "Noto Naskh Arabic", var(--serif); }
+[dir="rtl"] .eyebrow { letter-spacing: 0; }
+[dir="rtl"] .hero h1 { line-height: 1.25; }
+[dir="rtl"] .prose { line-height: 2; }
+[dir="rtl"] .cta blockquote { padding-left: 0; padding-right: 28px; border-left: 0; border-right: 3px solid var(--gold); }
+[dir="rtl"] .prose blockquote { padding-left: 0; padding-right: 1.2em; border-left: 0; border-right: 3px solid var(--gold); }
+[dir="rtl"] .timeline .now { margin-left: 0; margin-right: 10px; }
+[dir="rtl"] .post-nav .next { text-align: left; }
+[dir="rtl"] .stats dd { max-width: 170px; }
+
+@media (max-width: 760px) {
+  .lang-menu { margin: 12px 0 0; padding: 12px 0 0; border: 0; border-top: 1px solid rgba(255,255,255,.08); }
+  .lang-menu a { border: 0; padding: 8px 14px; font-size: .95rem; }
+}
+
+[hidden] { display: none !important; }
+.stats dt { unicode-bidi: plaintext; }
+@media (max-width: 760px) { .nav { align-items: stretch; } }

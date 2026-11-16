@@ -12,8 +12,11 @@ on:
   push:
     paths:
       - "tools/**"
+      - "content/**"
+      - "assets/img/**"
       - "data/site.json"
       - "data/hidden.json"
+      - "data/i18n.yml"
 
 permissions:
   contents: write
@@ -30,7 +33,11 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-      - name: Postlarni olish va saytni qurish
+      - name: Tarjima kutubxonasini o'rnatish
+        run: gem install anthropic --no-document
+      - name: Postlarni olish, tarjima qilish va saytni qurish
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: ruby tools/sync.rb ${{ inputs.full && '--full' || '' }}
       - name: O'zgarishlarni saqlash
         run: |
@@ -39,4 +46,5 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "Yangi narsa yo'q"; exit 0; fi
           git commit -m "Telegram'dan yangilandi"
+          git pull --rebase
           git push

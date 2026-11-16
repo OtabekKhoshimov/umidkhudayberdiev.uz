@@ -1,0 +1,137 @@
+seo:
+  title: Umid Khudayberdiev — insurance and finance expert
+  description: Over 20 years of experience in insurance and business. Articles, talks and reflections.
+name: Umid Khudayberdiev
+hero:
+  eyebrow: Insurance and finance expert
+  first_name: Umid
+  last_name: Khudayberdiev
+  lead: Over 20 years of experience in insurance and business. I write and speak about personal growth, choosing a career, finance and Islamic finance.
+  photo: assets/img/portrait.jpg
+  button_articles: Read articles
+  button_telegram: Telegram channel
+stats:
+  - value: 20+
+    label: years of experience
+  - value: "3"
+    label: training programmes in Japan
+  - value: "{count}"
+    label: articles
+about:
+  eyebrow: About me
+  heading: Working on yourself is hard — and the most rewarding work there is
+  lead: "For twenty years I have worked in insurance: from state supervision to leading major insurance companies. I received professional training in life insurance in Japan."
+  text: I run master classes for students and young people and share my experience as a speaker at business clubs. On my Telegram channel I write about life, family, the value of time, relationships and self-improvement.
+education:
+  heading: Education
+  items:
+    - years: "2004"
+      title: Tashkent University of Information Technologies
+      subtitle: Management
+    - years: "2012"
+      title: Tashkent Financial Institute, Master's degree
+      subtitle: Macroeconomic statistics
+    - years: 2014 · 2017 · 2022
+      title: FALIA (Tokyo, Yokohama) and OLICD (Tokyo)
+      subtitle: Japan — developing life insurance
+career:
+  eyebrow: Career
+  heading: A 20-year journey
+  current_label: Current position
+  items:
+    - years: 2022 — present
+      company: Hamkor Sugʻurta JSC
+      current: true
+    - years: 2021 — 2022
+      company: Trust Insurance LLC
+    - years: 2020 — 2021
+      company: Semurg Insurance JV LLC
+    - years: 2019 — 2020
+      company: Kafil Sugʻurta
+    - years: "2019"
+      company: Mega Invest Insurance (My Insurance)
+    - years: 2014 — 2019
+      company: INGO Uzbekistan
+    - years: 2013 — 2014
+      company: Temiryoʻl-Sugʻurta LLC
+    - years: 2011 — 2013
+      company: State Inspectorate for Insurance Supervision, Ministry of Finance of the Republic of Uzbekistan
+    - years: 2008 — 2011
+      company: Asia Insurance LLC
+    - years: 2004 — 2008
+      company: Temir yoʻllari sugʻurta LLC
+activity:
+  eyebrow: Professional activity
+  heading: Clubs, forums and talks
+  items:
+    - title: MFaktor Executive Club
+      text: Long-standing member and speaker.
+    - title: 1000X Club
+      text: Chairman of the Board of Directors of the club for entrepreneurs and business owners.
+    - title: BigData Academy
+      text: Speaker.
+    - title: Tashkent Global Forum
+      text: Organiser. Guests of the forum have included Igor Mann, Michael Bang and Jordan Belfort.
+    - title: Islamic finance and takaful
+      text: Talks at international conferences and webinars on takaful — Sharia-compliant insurance.
+    - title: “Costly Mistakes”
+      text: Guest on the TV show broadcast by Toshkent TV.
+gallery:
+  - image: assets/img/press-klub.jpg
+    caption: International press club
+    wide: true
+  - image: assets/img/takaful.jpg
+    caption: International takaful conference
+  - image: assets/img/trening-1.jpg
+    caption: Lecture for students
+  - image: assets/img/master-klass.jpg
+    caption: Master class
+  - image: assets/img/auditoriya-1.jpg
+    caption: Meeting with the team
+    wide: true
+  - image: assets/img/trening-2.jpg
+    caption: With students
+masterclass:
+  eyebrow: Master classes
+  heading: “Choosing the right career — purpose and mission”
+  text: "A master class for university and training-centre students. Topics: purpose and mission, the value of time, networking, personal finance, thinking outside the box, mentor and student, lifelong learning, leadership."
+  posters:
+    - assets/img/afisha-19.jpg
+    - assets/img/afisha-23.jpg
+    - assets/img/afisha-21.jpg
+    - assets/img/afisha-20.jpg
+  topics:
+    - Purpose and mission
+    - Seeking the truth
+    - Family and parents
+    - The value of time
+    - Thinking outside the box
+    - Being positive
+    - Relationships
+    - Knowledge and experience
+    - The Pareto principle
+    - Maslow's pyramid
+    - Mentor and student
+    - Leadership
+    - Motivation
+articles:
+  eyebrow: Blog
+  heading: Latest articles
+  all_link: All articles →
+  page_heading: Articles
+  page_lead: Reflections on life, family, career, the value of time and personal growth.
+cta:
+  quote: |-
+    The seed fell to the earth and became a flower,
+    The silkworm gave its life and became silk.
+    Have you not the zeal of a tulip seed?
+    Have you not the generosity of a silkworm?
+  quote_author: Alisher Navoi
+  heading: Let's grow together!
+  text: New articles appear first on the Telegram channel. If you'd like to invite me to give a talk or a master class, get in touch through the channel too.
+contact:
+  phone: ""
+  email: ""
+  telegram_personal: ""
+footer:
+  slogan: Let's grow together!

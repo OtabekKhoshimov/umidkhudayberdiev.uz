@@ -1,0 +1,112 @@
+# Saytning doimiy yozuvlari (menyu, tugmalar). Ustoz tahrirlaydigan matnlar content/*.yml da.
+uz:
+  label: Ўзб
+  uz_articles: "Ўзбекча мақолалар"
+  html_lang: uz-Cyrl
+  dir: ltr
+  nav_about: Мен ҳақимда
+  nav_activity: Фаолият
+  nav_articles: Мақолалар
+  nav_contact: Алоқа
+  minutes: дақиқа
+  minutes_read: дақиқа ўқиш
+  back: ← Барча мақолалар
+  prev: ← Олдинги
+  next: Кейинги →
+  comment: Telegram'да изоҳ қолдириш
+  share: Улашиш
+  subscribe: Каналга обуна бўлиш →
+  search: Мақола қидириш…
+  empty: Ҳеч нарса топилмади.
+  more: Яна кўрсатиш
+  total: "Жами {count} та мақола."
+  footer_note: Мақолалар Telegram каналдан автоматик олинади.
+  translated_note: ""
+  no_articles: ""
+  phone: Телефон
+  email: E-mail
+  months: [январ, феврал, март, апрел, май, июн, июл, август, сентябр, октябр, ноябр, декабр]
+ru:
+  label: Рус
+  uz_articles: "Статьи на узбекском →"
+  html_lang: ru
+  dir: ltr
+  nav_about: Обо мне
+  nav_activity: Деятельность
+  nav_articles: Статьи
+  nav_contact: Контакты
+  minutes: мин
+  minutes_read: мин чтения
+  back: ← Все статьи
+  prev: ← Предыдущая
+  next: Следующая →
+  comment: Комментировать в Telegram
+  share: Поделиться
+  subscribe: Подписаться на канал →
+  search: Поиск статей…
+  empty: Ничего не найдено.
+  more: Показать ещё
+  total: "Переведено статей: {count}."
+  footer_note: Статьи автоматически публикуются из Telegram-канала и переводятся с узбекского.
+  translated_note: Статья автоматически переведена с узбекского языка.
+  original_link: Читать оригинал
+  no_articles: Переводы статей скоро появятся здесь. Пока все статьи доступны на узбекском языке.
+  phone: Телефон
+  email: E-mail
+  months: [января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+en:
+  label: Eng
+  uz_articles: "Articles in Uzbek →"
+  html_lang: en
+  dir: ltr
+  nav_about: About
+  nav_activity: Activity
+  nav_articles: Articles
+  nav_contact: Contact
+  minutes: min
+  minutes_read: min read
+  back: ← All articles
+  prev: ← Previous
+  next: Next →
+  comment: Comment on Telegram
+  share: Share
+  subscribe: Subscribe to the channel →
+  search: Search articles…
+  empty: Nothing found.
+  more: Show more
+  total: "{count} translated articles."
+  footer_note: Articles are published automatically from the Telegram channel and translated from Uzbek.
+  translated_note: This article was automatically translated from Uzbek.
+  original_link: Read the original
+  no_articles: Translated articles will appear here soon. In the meantime, all articles are available in Uzbek.
+  phone: Phone
+  email: E-mail
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+ar:
+  label: عربي
+  uz_articles: "← المقالات بالأوزبكية"
+  html_lang: ar
+  dir: rtl
+  nav_about: نبذة عني
+  nav_activity: النشاط
+  nav_articles: المقالات
+  nav_contact: تواصل
+  minutes: دقائق
+  minutes_read: دقائق قراءة
+  back: → جميع المقالات
+  prev: → السابق
+  next: التالي ←
+  comment: علّق على تيليغرام
+  share: مشاركة
+  subscribe: اشترك في القناة ←
+  search: ابحث في المقالات…
+  empty: لم يُعثر على شيء.
+  more: عرض المزيد
+  total: "عدد المقالات المترجمة: {count}."
+  footer_note: تُنشر المقالات تلقائيًا من قناة تيليغرام وتُترجم من الأوزبكية.
+  translated_note: تُرجمت هذه المقالة تلقائيًا من اللغة الأوزبكية.
+  original_link: اقرأ النص الأصلي
+  no_articles: ستظهر المقالات المترجمة هنا قريبًا. وفي الأثناء، جميع المقالات متاحة باللغة الأوزبكية.
+  phone: الهاتف
+  email: البريد الإلكتروني
+  months: [يناير, فبراير, مارس, أبريل, مايو, يونيو, يوليو, أغسطس, سبتمبر, أكتوبر, نوفمبر, ديسمبر]

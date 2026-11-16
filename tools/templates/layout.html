@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="uz-Cyrl">
+<html lang="{{t.html_lang}}" dir="{{t.dir}}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   <link rel="canonical" href="{{canonical}}">
+{{#alternates}}
+  <link rel="alternate" hreflang="{{hreflang}}" href="{{href}}">
+{{/alternates}}
   <meta property="og:type" content="{{og_type}}">
   <meta property="og:title" content="{{title}}">
   <meta property="og:description" content="{{description}}">
@@ -16,45 +19,57 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{root}}assets/style.css?v=1">
+{{#is_ar}}
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+{{/is_ar}}
+  <link rel="stylesheet" href="{{root}}assets/style.css?v=2">
+{{#is_uz}}
   <script>try{if(localStorage.getItem("yozuv")==="lotin")document.documentElement.classList.add("lotin-wait")}catch(e){}</script>
+{{/is_uz}}
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="{{root}}"><span class="brand-mark" data-keep>УХ</span><span>Умид Худойбердиев</span></a>
+      <a class="brand" href="{{home}}"><span class="brand-mark" data-keep>{{monogram}}</span><span>{{c.name}}</span></a>
       <nav class="nav" id="nav">
-        <a href="{{root}}#haqida">Мен ҳақимда</a>
-        <a href="{{root}}#faoliyat">Фаолият</a>
-        <a href="{{root}}maqolalar/">Мақолалар</a>
-        <a href="{{root}}#aloqa">Алоқа</a>
+        <a href="{{home}}#haqida">{{t.nav_about}}</a>
+        <a href="{{home}}#faoliyat">{{t.nav_activity}}</a>
+        <a href="{{home}}maqolalar/">{{t.nav_articles}}</a>
+        <a href="{{home}}#aloqa">{{t.nav_contact}}</a>
+        <div class="lang-menu" data-keep>
+{{#langs}}
+          <a href="{{href}}" hreflang="{{code}}" class="{{#active}}active{{/active}}">{{label}}</a>
+{{/langs}}
+        </div>
       </nav>
       <div class="header-tools">
+{{#is_uz}}
         <button class="script-toggle" id="scriptToggle" type="button" aria-label="Ёзувни алмаштириш" data-keep>
           <span data-s="kiril">Кир</span><span data-s="lotin">Lot</span>
         </button>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+{{/is_uz}}
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
   <main>
-{{content}}
+{{{content}}}
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div>
-        <div class="brand"><span class="brand-mark" data-keep>УХ</span><span>Умид Худойбердиев</span></div>
-        <p class="muted">Биргаликда ривожланамиз!</p>
+        <div class="brand"><span class="brand-mark" data-keep>{{monogram}}</span><span>{{c.name}}</span></div>
+        <p class="muted">{{c.footer.slogan}}</p>
       </div>
       <div class="footer-links">
-        <a href="{{root}}maqolalar/">Мақолалар</a>
-        <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Telegram канал</a>
+        <a href="{{home}}maqolalar/">{{t.nav_articles}}</a>
+        <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Telegram</a>
       </div>
-      <p class="muted small">© {{year}} Умид Худойбердиев. Мақолалар Telegram каналдан автоматик олинади.</p>
+      <p class="muted small">© {{year}} {{c.name}}. {{t.footer_note}}</p>
     </div>
   </footer>
-  <script src="{{root}}assets/script.js?v=1"></script>
+  <script src="{{root}}assets/script.js?v=2"></script>
 </body>
 </html>

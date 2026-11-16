@@ -1,19 +1,22 @@
     <section class="page-head">
       <div class="wrap">
-        <p class="eyebrow">Блог</p>
-        <h1>Мақолалар</h1>
-        <p class="lead narrow">Ҳаёт, оила, касб, вақт қадри ва шахсий ривожланиш ҳақида фикрлар. Жами {{count}} та мақола.</p>
+        <p class="eyebrow">{{c.articles.eyebrow}}</p>
+        <h1>{{c.articles.page_heading}}</h1>
+        <p class="lead narrow">{{c.articles.page_lead}} {{total}}</p>
         <label class="search">
-          <input type="search" id="search" placeholder="Мақола қидириш…" autocomplete="off">
+          <input type="search" id="search" placeholder="{{t.search}}" autocomplete="off">
         </label>
       </div>
     </section>
     <section class="section section-tight">
       <div class="wrap">
+{{#no_articles}}
+        <p class="notice">{{t.no_articles}} <a href="{{root}}maqolalar/">{{uz_articles_label}}</a></p>
+{{/no_articles}}
         <div class="cards" id="cards">
-{{cards}}
+{{{cards}}}
         </div>
-        <p class="empty" id="empty" hidden>Ҳеч нарса топилмади.</p>
-        <button class="btn btn-outline more" id="more" type="button" hidden>Яна кўрсатиш</button>
+        <p class="empty" id="empty" hidden>{{t.empty}}</p>
+        <button class="btn btn-outline more" id="more" type="button" hidden>{{t.more}}</button>
       </div>
     </section>

@@ -77,12 +77,15 @@
       root.classList.remove("lotin");
       root.lang = "uz-Cyrl";
     }
+    if (!isUz) return;
     try { localStorage.setItem("yozuv", latin ? "lotin" : "kiril"); } catch (e) {}
   }
 
+  // Kirill/Lotin faqat o'zbekcha sahifalarda (rus tilidagi kirillni o'girmaslik uchun)
+  var isUz = root.lang.indexOf("uz") === 0;
   var saved = null;
   try { saved = localStorage.getItem("yozuv"); } catch (e) {}
-  if (saved === "lotin") setScript(true);
+  if (isUz && saved === "lotin") setScript(true);
   root.classList.remove("lotin-wait");
 
   var toggle = document.getElementById("scriptToggle");
@@ -120,7 +123,7 @@
         el.hidden = !ok || (!q && matches > shown);
       });
       more.hidden = !!q || items.length <= shown;
-      empty.hidden = matches > 0;
+      empty.hidden = matches > 0 || !items.length;
     }
     search.addEventListener("input", render);
     more.addEventListener("click", function () { shown += PAGE; render(); });

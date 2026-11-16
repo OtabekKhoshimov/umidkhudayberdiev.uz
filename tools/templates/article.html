@@ -1,27 +1,43 @@
     <article class="article">
       <div class="wrap-narrow">
-        <a class="back" href="../">← Барча мақолалар</a>
-        <h1>{{title}}</h1>
-        <div class="meta"><time datetime="{{iso}}">{{date}}</time> · {{minutes}} дақиқа ўқиш</div>
+        <a class="back" href="../">{{t.back}}</a>
+        <h1>{{a.title}}</h1>
+        <div class="meta"><time datetime="{{a.iso}}">{{a.date}}</time> · {{a.minutes}} {{t.minutes_read}}</div>
       </div>
       <div class="wrap-narrow">
-        {{hero}}
+{{#translated}}
+        <p class="notice">{{t.translated_note}} <a href="{{root}}maqolalar/{{a.id}}/" lang="uz">{{t.original_link}}</a></p>
+{{/translated}}
+{{#a.image}}
+        <figure class="article-img"><img src="{{root}}{{a.image}}" alt=""></figure>
+{{/a.image}}
         <div class="prose">
-{{body}}
+{{{a.body}}}
         </div>
-        <div class="tags">{{tags}}</div>
+        <div class="tags">
+{{#a.tags}}
+          <span class="tag">#{{.}}</span>
+{{/a.tags}}
+        </div>
         <div class="share">
-          <a class="btn btn-outline" href="{{tg_link}}" target="_blank" rel="noopener">Telegram'да изоҳ қолдириш</a>
-          <a class="btn btn-ghost-dark" href="https://t.me/share/url?url={{share}}" target="_blank" rel="noopener">Улашиш</a>
+          <a class="btn btn-outline" href="https://t.me/{{telegram}}/{{a.id}}" target="_blank" rel="noopener">{{t.comment}}</a>
+          <a class="btn btn-ghost-dark" href="https://t.me/share/url?url={{share}}" target="_blank" rel="noopener">{{t.share}}</a>
         </div>
         <aside class="author">
-          <img src="../../assets/img/portrait.jpg" alt="">
+          <img src="{{root}}{{c.hero.photo}}" alt="">
           <div>
-            <b>Умид Худойбердиев</b>
-            <p>Суғурта ва молия мутахассиси, 20 йилдан ортиқ тажриба.</p>
-            <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Каналга обуна бўлиш →</a>
+            <b>{{c.name}}</b>
+            <p>{{c.hero.eyebrow}}</p>
+            <a href="https://t.me/{{telegram}}" target="_blank" rel="noopener">{{t.subscribe}}</a>
           </div>
         </aside>
-        <nav class="post-nav">{{nav}}</nav>
+        <nav class="post-nav">
+{{#older}}
+          <a class="prev" href="../{{id}}/"><span>{{t.prev}}</span>{{title}}</a>
+{{/older}}
+{{#newer}}
+          <a class="next" href="../{{id}}/"><span>{{t.next}}</span>{{title}}</a>
+{{/newer}}
+        </nav>
       </div>
     </article>

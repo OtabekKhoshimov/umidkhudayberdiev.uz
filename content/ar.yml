@@ -1,0 +1,137 @@
+seo:
+  title: أوميد خودايبردييف — خبير في التأمين والمالية
+  description: أكثر من 20 عامًا من الخبرة في التأمين والأعمال. مقالات ومحاضرات وتأملات.
+name: أوميد خودايبردييف
+hero:
+  eyebrow: خبير في التأمين والمالية
+  first_name: أوميد
+  last_name: خودايبردييف
+  lead: أكثر من 20 عامًا من الخبرة في مجال التأمين والأعمال. أكتب وأحاضر عن التطوير الذاتي واختيار المهنة والمالية والمالية الإسلامية.
+  photo: assets/img/portrait.jpg
+  button_articles: اقرأ المقالات
+  button_telegram: قناة تيليغرام
+stats:
+  - value: 20+
+    label: عامًا من الخبرة
+  - value: "3"
+    label: برامج تدريبية في اليابان
+  - value: "{count}"
+    label: مقالة
+about:
+  eyebrow: نبذة عني
+  heading: إصلاح الذات طريق شاق، لكنه أثمن طريق
+  lead: أعمل في مجال التأمين منذ عشرين عامًا، من الرقابة الحكومية إلى قيادة كبرى شركات التأمين. وتلقيت تدريبًا مهنيًا في التأمين على الحياة في اليابان.
+  text: أقدّم دورات تدريبية للطلاب والشباب، وأشارك خبرتي متحدثًا في نوادي رواد الأعمال. وفي قناتي على تيليغرام أكتب عن الحياة والأسرة وقيمة الوقت والعلاقات والعمل على الذات.
+education:
+  heading: التعليم
+  items:
+    - years: "2004"
+      title: جامعة طشقند لتكنولوجيا المعلومات
+      subtitle: الإدارة
+    - years: "2012"
+      title: معهد طشقند المالي، الماجستير
+      subtitle: الإحصاء الاقتصادي الكلي
+    - years: 2014 · 2017 · 2022
+      title: FALIA (طوكيو، يوكوهاما) وOLICD (طوكيو)
+      subtitle: اليابان — تطوير التأمين على الحياة
+career:
+  eyebrow: المسيرة المهنية
+  heading: رحلة 20 عامًا
+  current_label: المنصب الحالي
+  items:
+    - years: 2022 — حتى الآن
+      company: شركة Hamkor Sugʻurta المساهمة
+      current: true
+    - years: 2021 — 2022
+      company: شركة Trust Insurance
+    - years: 2020 — 2021
+      company: شركة Semurg Insurance المشتركة
+    - years: 2019 — 2020
+      company: Kafil Sugʻurta
+    - years: "2019"
+      company: Mega Invest Insurance (My Insurance)
+    - years: 2014 — 2019
+      company: INGO Uzbekistan
+    - years: 2013 — 2014
+      company: شركة Temiryoʻl-Sugʻurta
+    - years: 2011 — 2013
+      company: هيئة الرقابة الحكومية على التأمين التابعة لوزارة المالية في جمهورية أوزبكستان
+    - years: 2008 — 2011
+      company: شركة Asia Insurance
+    - years: 2004 — 2008
+      company: شركة Temir yoʻllari sugʻurta
+activity:
+  eyebrow: النشاط المهني
+  heading: نوادٍ ومنتديات ومحاضرات
+  items:
+    - title: MFaktor Executive Club
+      text: عضو دائم ومتحدث.
+    - title: نادي 1000X
+      text: رئيس مجلس إدارة نادي رواد الأعمال وأصحاب الشركات.
+    - title: أكاديمية BigData
+      text: متحدث.
+    - title: Tashkent Global Forum
+      text: "منظِّم. من بين ضيوف المنتدى: إيغور مان، ومايكل بانغ، وجوردان بلفورت."
+    - title: المالية الإسلامية والتكافل
+      text: محاضرات في مؤتمرات وندوات دولية عن التكافل، أي التأمين المتوافق مع الشريعة.
+    - title: «أخطاء باهظة الثمن»
+      text: ضيف البرنامج التلفزيوني على قناة طشقند.
+gallery:
+  - image: assets/img/press-klub.jpg
+    caption: النادي الصحفي الدولي
+    wide: true
+  - image: assets/img/takaful.jpg
+    caption: مؤتمر دولي عن التكافل
+  - image: assets/img/trening-1.jpg
+    caption: محاضرة للطلاب
+  - image: assets/img/master-klass.jpg
+    caption: دورة تدريبية
+  - image: assets/img/auditoriya-1.jpg
+    caption: لقاء مع الفريق
+    wide: true
+  - image: assets/img/trening-2.jpg
+    caption: مع الطلاب
+masterclass:
+  eyebrow: دورات تدريبية
+  heading: «اختيار المهنة الصحيحة — الهدف والرسالة»
+  text: "دورة تدريبية لطلاب الجامعات ومراكز التدريب. المحاور: الهدف والرسالة، قيمة الوقت، بناء العلاقات، المالية الشخصية، التفكير خارج الصندوق، المعلّم والتلميذ، التعلّم المستمر، القيادة."
+  posters:
+    - assets/img/afisha-19.jpg
+    - assets/img/afisha-23.jpg
+    - assets/img/afisha-21.jpg
+    - assets/img/afisha-20.jpg
+  topics:
+    - الهدف والرسالة
+    - السعي إلى الحق
+    - الأسرة والوالدان
+    - قيمة الوقت
+    - التفكير خارج الصندوق
+    - الإيجابية
+    - العلاقات
+    - المعرفة والخبرة
+    - مبدأ باريتو
+    - هرم ماسلو
+    - المعلّم والتلميذ
+    - القيادة
+    - التحفيز
+articles:
+  eyebrow: المدونة
+  heading: أحدث المقالات
+  all_link: ← جميع المقالات
+  page_heading: المقالات
+  page_lead: تأملات في الحياة والأسرة والمهنة وقيمة الوقت والتطوير الذاتي.
+cta:
+  quote: |-
+    سقطت البذرة في الأرض فصارت زهرة،
+    وضحّت دودة القز بحياتها فصارت حريرًا.
+    أليس لك همّة كبذرة الخزامى؟
+    أليس لك سخاء كدودة القز؟
+  quote_author: علي شير نوائي
+  heading: لننمُ معًا!
+  text: تُنشر المقالات الجديدة أولًا في قناة تيليغرام. وإذا رغبتم في دعوتي لإلقاء محاضرة أو تقديم دورة تدريبية، فتواصلوا معي عبر القناة أيضًا.
+contact:
+  phone: ""
+  email: ""
+  telegram_personal: ""
+footer:
+  slogan: لننمُ معًا!

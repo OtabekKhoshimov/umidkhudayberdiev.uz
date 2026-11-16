@@ -1,9 +1,8 @@
 {
   "name": "Умид Худойбердиев",
-  "title": "Умид Худойбердиев — суғурта ва молия мутахассиси",
-  "description": "Суғурта ва бизнес соҳасида 20 йилдан ортиқ тажриба. Мақолалар, маърузалар ва фикрлар.",
   "url": "https://umidkhudayberdiev.uz",
   "telegram": "umidkhudayberdiev",
-  "ga": "",
-  "min_article_length": 350
+  "min_article_length": 350,
+  "translate_from_id": 1440,
+  "translate_per_run": 12
 }

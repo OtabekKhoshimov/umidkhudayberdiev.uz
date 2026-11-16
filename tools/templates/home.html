@@ -1,21 +1,21 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <p class="eyebrow">Суғурта ва молия мутахассиси</p>
-          <h1>Умид<br>Худойбердиев</h1>
-          <p class="lead">Суғурта ва бизнес соҳасида 20 йилдан ортиқ тажриба. Шахсий ривожланиш, касб танлаш, молия ва ислом молияси ҳақида ёзаман ва маърузалар ўқийман.</p>
+          <p class="eyebrow">{{c.hero.eyebrow}}</p>
+          <h1>{{c.hero.first_name}}<br>{{c.hero.last_name}}</h1>
+          <p class="lead">{{c.hero.lead}}</p>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="maqolalar/">Мақолаларни ўқиш</a>
-            <a class="btn btn-ghost" href="https://t.me/{{telegram}}" target="_blank" rel="noopener">Telegram канал</a>
+            <a class="btn btn-gold" href="maqolalar/">{{c.hero.button_articles}}</a>
+            <a class="btn btn-ghost" href="https://t.me/{{telegram}}" target="_blank" rel="noopener">{{c.hero.button_telegram}}</a>
           </div>
           <dl class="stats">
-            <div><dt>20+</dt><dd>йиллик тажриба</dd></div>
-            <div><dt>3</dt><dd>марта Японияда малака ошириш</dd></div>
-            <div><dt>{{count}}</dt><dd>мақола</dd></div>
+{{#stats}}
+            <div><dt>{{value}}</dt><dd>{{label}}</dd></div>
+{{/stats}}
           </dl>
         </div>
         <figure class="hero-photo">
-          <img src="assets/img/portrait.jpg" alt="Умид Худойбердиев">
+          <img src="{{root}}{{c.hero.photo}}" alt="{{c.name}}">
         </figure>
       </div>
     </section>
@@ -23,17 +23,17 @@
     <section class="section" id="haqida">
       <div class="wrap about-grid">
         <div>
-          <p class="eyebrow">Мен ҳақимда</p>
-          <h2>Шахс ислоҳи — машаққатли, лекин энг қимматли жараён</h2>
-          <p class="big">Йигирма йилдан буён суғурта соҳасида ишлайман: давлат назоратидан тортиб, етакчи суғурта компанияларини бошқаришгача. Японияда ҳаёт суғуртаси бўйича профессионал таълим олганман.</p>
-          <p>Талабалар ва ёшлар учун мастер-класслар ўтказаман, тадбиркорлар клубларида спикер сифатида тажриба улашаман. Telegram каналимда ҳаёт, оила, вақт қадри, муносабатлар ва ўз устида ишлаш ҳақидаги фикрларимни ёзиб бораман.</p>
+          <p class="eyebrow">{{c.about.eyebrow}}</p>
+          <h2>{{c.about.heading}}</h2>
+          <p class="big">{{c.about.lead}}</p>
+          {{{about_text}}}
         </div>
         <div class="edu">
-          <h3>Таълим</h3>
+          <h3>{{c.education.heading}}</h3>
           <ul class="edu-list">
-            <li><span class="yr">2004</span><div><b>Тошкент ахборот технологиялари университети</b><small>Менежмент</small></div></li>
-            <li><span class="yr">2012</span><div><b>Тошкент молия институти, магистратура</b><small>Макроиқтисодий статистика</small></div></li>
-            <li><span class="yr">2014 · 2017 · 2022</span><div><b>FALIA (Токио, Йокогама) ва OLICD (Токио)</b><small>Япония — ҳаёт суғуртасини ривожлантириш</small></div></li>
+{{#c.education.items}}
+            <li><span class="yr">{{years}}</span><div><b>{{title}}</b><small>{{subtitle}}</small></div></li>
+{{/c.education.items}}
           </ul>
         </div>
       </div>
@@ -41,91 +41,92 @@
 
     <section class="section section-alt" id="tajriba">
       <div class="wrap">
-        <p class="eyebrow">Иш фаолияти</p>
-        <h2>20 йиллик йўл</h2>
+        <p class="eyebrow">{{c.career.eyebrow}}</p>
+        <h2>{{c.career.heading}}</h2>
         <ol class="timeline">
-          <li><span class="yr">2022 — ҳ.в.</span><b>«Hamkor Sugʻurta» АЖ <em class="now">Ҳозирги иш жойи</em></b></li>
-          <li><span class="yr">2021 — 2022</span><b>«Trust Insurance» МЧЖ</b></li>
-          <li><span class="yr">2020 — 2021</span><b>«Semurg Insurance» МЧЖ ҚК</b></li>
-          <li><span class="yr">2019 — 2020</span><b>«Kafil Sugʻurta»</b></li>
-          <li><span class="yr">2019</span><b>«Mega Invest Insurance» (My Insurance)</b></li>
-          <li><span class="yr">2014 — 2019</span><b>«INGO Uzbekistan»</b></li>
-          <li><span class="yr">2013 — 2014</span><b>«Temiryoʻl-Sugʻurta» МЧЖ</b></li>
-          <li><span class="yr">2011 — 2013</span><b>Ўзбекистон Республикаси Молия вазирлиги ҳузуридаги Суғурта назорати давлат инспекцияси</b></li>
-          <li><span class="yr">2008 — 2011</span><b>«Asia Insurance» МЧЖ</b></li>
-          <li><span class="yr">2004 — 2008</span><b>«Temir yoʻllari sugʻurta» МЧЖ</b></li>
+{{#c.career.items}}
+          <li><span class="yr">{{years}}</span><b>{{company}}{{#current}} <em class="now">{{c.career.current_label}}</em>{{/current}}</b></li>
+{{/c.career.items}}
         </ol>
       </div>
     </section>
 
     <section class="section" id="faoliyat">
       <div class="wrap">
-        <p class="eyebrow">Профессионал фаоллик</p>
-        <h2>Клублар, форумлар ва маърузалар</h2>
+        <p class="eyebrow">{{c.activity.eyebrow}}</p>
+        <h2>{{c.activity.heading}}</h2>
         <div class="roles">
-          <article class="role"><span class="role-ic">01</span><h3>MFaktor Executive Club</h3><p>Доимий аъзо ва спикер.</p></article>
-          <article class="role"><span class="role-ic">02</span><h3>1000X клуби</h3><p>Тадбиркорлар ва соҳа эгалари клубининг Директорлар кенгаши раиси.</p></article>
-          <article class="role"><span class="role-ic">03</span><h3>BigData академияси</h3><p>Спикер.</p></article>
-          <article class="role"><span class="role-ic">04</span><h3>Tashkent Global Forum</h3><p>Ташкилотчи. Форум меҳмонлари орасида Игорь Манн, Michael Bang ва Jordan Belfort бўлган.</p></article>
-          <article class="role"><span class="role-ic">05</span><h3>Ислом молияси ва такафул</h3><p>Шариатга мувофиқ суғурта — такафул бўйича халқаро конференция ва вебинарларда маърузалар.</p></article>
-          <article class="role"><span class="role-ic">06</span><h3>«Қимматга тушган хатолар»</h3><p>Тошкент телеканалидаги кўрсатув меҳмони.</p></article>
+{{#activity}}
+          <article class="role"><span class="role-ic">{{num}}</span><h3>{{title}}</h3><p>{{text}}</p></article>
+{{/activity}}
         </div>
 
         <div class="gallery">
-          <figure class="g-wide"><img src="assets/img/press-klub.jpg" alt="Халқаро пресс-клуб" loading="lazy"><figcaption>Халқаро пресс-клуб</figcaption></figure>
-          <figure><img src="assets/img/takaful.jpg" alt="Такафул конференцияси" loading="lazy"><figcaption>Такафул бўйича халқаро конференция</figcaption></figure>
-          <figure><img src="assets/img/trening-1.jpg" alt="Талабалар учун маъруза" loading="lazy"><figcaption>Талабалар учун маъруза</figcaption></figure>
-          <figure><img src="assets/img/master-klass.jpg" alt="Мастер-класс" loading="lazy"><figcaption>Мастер-класс</figcaption></figure>
-          <figure class="g-wide"><img src="assets/img/auditoriya-1.jpg" alt="Учрашув" loading="lazy"><figcaption>Жамоа билан учрашув</figcaption></figure>
-          <figure><img src="assets/img/trening-2.jpg" alt="Талабалар билан" loading="lazy"><figcaption>Талабалар билан</figcaption></figure>
+{{#c.gallery}}
+          <figure class="{{#wide}}g-wide{{/wide}}"><img src="{{root}}{{image}}" alt="{{caption}}" loading="lazy"><figcaption>{{caption}}</figcaption></figure>
+{{/c.gallery}}
         </div>
       </div>
     </section>
 
     <section class="section section-dark" id="masterklass">
       <div class="wrap">
-        <p class="eyebrow">Мастер-класслар</p>
-        <h2>«Тўғри касб танлаш — мақсад ва миссия»</h2>
-        <p class="lead narrow">Университет ва ўқув марказларида талабалар учун ўтказиладиган мастер-класс. Мавзулар: мақсад ва миссия, вақт қадри, нетворкинг, шахсий молия, ноодатий фикрлаш, устоз ва шогирд, доимий ўрганиш, лидерлик.</p>
+        <p class="eyebrow">{{c.masterclass.eyebrow}}</p>
+        <h2>{{c.masterclass.heading}}</h2>
+        <p class="lead narrow">{{c.masterclass.text}}</p>
         <div class="posters">
-          <img src="assets/img/afisha-19.jpg" alt="MDIS Tashkent" loading="lazy">
-          <img src="assets/img/afisha-23.jpg" alt="WIUT Students' Union" loading="lazy">
-          <img src="assets/img/afisha-21.jpg" alt="pdp.uz" loading="lazy">
-          <img src="assets/img/afisha-20.jpg" alt="Мастер-класс" loading="lazy">
+{{#c.masterclass.posters}}
+          <img src="{{root}}{{.}}" alt="" loading="lazy">
+{{/c.masterclass.posters}}
         </div>
         <ul class="topics">
-          <li>Мақсад ва миссия</li><li>Ҳаққа интилиш</li><li>Оила ва ота-она</li><li>Вақт қадри</li>
-          <li>Ноодатий фикрлаш</li><li>Позитив бўлиш</li><li>Муносабатлар</li><li>Билим ва тажриба</li>
-          <li>Парето тамойили</li><li>Маслоу пирамидаси</li><li>Устоз ва шогирд</li><li>Лидерлик</li><li>Мотивация</li>
+{{#c.masterclass.topics}}
+          <li>{{.}}</li>
+{{/c.masterclass.topics}}
         </ul>
       </div>
     </section>
 
+{{#has_latest}}
     <section class="section" id="maqolalar">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Блог</p>
-            <h2>Сўнгги мақолалар</h2>
+            <p class="eyebrow">{{c.articles.eyebrow}}</p>
+            <h2>{{c.articles.heading}}</h2>
           </div>
-          <a class="link-more" href="maqolalar/">Барча мақолалар →</a>
+          <a class="link-more" href="maqolalar/">{{c.articles.all_link}}</a>
         </div>
         <div class="cards">
-{{latest}}
+{{{latest}}}
         </div>
       </div>
     </section>
+{{/has_latest}}
 
     <section class="section section-alt" id="aloqa">
       <div class="wrap cta">
         <blockquote>
-          <p>Уруғ ерга тушиб чечак бўлди,<br>Қурт жондан кечиб ипак бўлди.<br>Лола тухмича ғайратинг йўқми?<br>Пилла қуртича ҳимматинг йўқми?</p>
-          <cite>— Алишер Навоий</cite>
+          <p>{{{quote}}}</p>
+          <cite>— {{c.cta.quote_author}}</cite>
         </blockquote>
         <div class="cta-box">
-          <h2>Биргаликда ривожланамиз!</h2>
-          <p>Янги мақолалар биринчи бўлиб Telegram каналда чиқади. Маъруза ёки мастер-класс учун таклиф қилмоқчи бўлсангиз ҳам канал орқали боғланинг.</p>
-          <a class="btn btn-gold" href="https://t.me/{{telegram}}" target="_blank" rel="noopener">@{{telegram}}</a>
+          <h2>{{c.cta.heading}}</h2>
+          <p>{{c.cta.text}}</p>
+          <a class="btn btn-gold" href="https://t.me/{{telegram}}" target="_blank" rel="noopener" dir="ltr">@{{telegram}}</a>
+{{#has_contacts}}
+          <ul class="contacts">
+{{#c.contact.phone}}
+            <li><span>{{t.phone}}</span><a href="tel:{{phone_link}}" dir="ltr">{{c.contact.phone}}</a></li>
+{{/c.contact.phone}}
+{{#c.contact.email}}
+            <li><span>{{t.email}}</span><a href="mailto:{{c.contact.email}}" dir="ltr">{{c.contact.email}}</a></li>
+{{/c.contact.email}}
+{{#c.contact.telegram_personal}}
+            <li><span>Telegram</span><a href="https://t.me/{{tg_personal}}" target="_blank" rel="noopener" dir="ltr">@{{tg_personal}}</a></li>
+{{/c.contact.telegram_personal}}
+          </ul>
+{{/has_contacts}}
         </div>
       </div>
     </section>
