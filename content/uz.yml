@@ -39,9 +39,11 @@ career:
   heading: 20 йиллик йўл
   current_label: Ҳозирги иш жойи
   items:
-    - years: 2022 — ҳ.в.
-      company: «Hamkor Sugʻurta» АЖ
+    - years: 2026 — ҳ.в.
+      company: «Hayot Invest Insurance» АЖ — Бош директор
       current: true
+    - years: 2022 — 2026
+      company: «Hamkor Sugʻurta» АЖ
     - years: 2021 — 2022
       company: «Trust Insurance» МЧЖ
     - years: 2020 — 2021

@@ -39,9 +39,11 @@ career:
   heading: رحلة 20 عامًا
   current_label: المنصب الحالي
   items:
-    - years: 2022 — حتى الآن
-      company: شركة Hamkor Sugʻurta المساهمة
+    - years: 2026 — حتى الآن
+      company: شركة Hayot Invest Insurance المساهمة — المدير العام
       current: true
+    - years: 2022 — 2026
+      company: شركة Hamkor Sugʻurta المساهمة
     - years: 2021 — 2022
       company: شركة Trust Insurance
     - years: 2020 — 2021

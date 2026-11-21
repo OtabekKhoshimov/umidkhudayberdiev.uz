@@ -39,9 +39,11 @@ career:
   heading: Путь длиной в 20 лет
   current_label: Текущее место работы
   items:
-    - years: 2022 — н.в.
-      company: АО «Hamkor Sugʻurta»
+    - years: 2026 — н.в.
+      company: АО «Hayot Invest Insurance» — Генеральный директор
       current: true
+    - years: 2022 — 2026
+      company: АО «Hamkor Sugʻurta»
     - years: 2021 — 2022
       company: ООО «Trust Insurance»
     - years: 2020 — 2021

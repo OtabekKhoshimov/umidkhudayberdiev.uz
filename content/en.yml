@@ -39,9 +39,11 @@ career:
   heading: A 20-year journey
   current_label: Current position
   items:
-    - years: 2022 — present
-      company: Hamkor Sugʻurta JSC
+    - years: 2026 — present
+      company: Hayot Invest Insurance JSC — Chief Executive Officer
       current: true
+    - years: 2022 — 2026
+      company: Hamkor Sugʻurta JSC
     - years: 2021 — 2022
       company: Trust Insurance LLC
     - years: 2020 — 2021
